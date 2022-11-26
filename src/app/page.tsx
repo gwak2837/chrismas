@@ -18,7 +18,7 @@ export default async function Home() {
           </h1>
 
           <button className={s.button}>
-            <Link href="/present">
+            <Link href="/funding">
               <h3 className={s.h3}>선물하기</h3>
             </Link>
           </button>
