@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 import { pool } from '../../../common/postgres'
-import { fundings } from '.'
 
 const sql = `
 SELECT funding.id, title, image_url, story, price, present_image_url, present_name, child.id, name, age
@@ -17,5 +16,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   // const { rows } = await pool.query(sql, [fundingId])
 
-  res.status(200).json(fundings[fundingId - 1])
+  // res.status(200).json(fundings[fundingId - 1])
 }

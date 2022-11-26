@@ -1,7 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { useQuery } from 'react-query'
 
-import { SERVER_URL } from '../../common/constants'
+import { fundings, SERVER_URL } from '../../common/constants'
 import s from './page.module.css'
 
 async function getFirstFunding() {
@@ -15,8 +16,6 @@ async function getFirstFunding() {
 }
 
 export default async function Home() {
-  const firstFunding = await getFirstFunding()
-
   return (
     <>
       <div className={s.imageContainer}>
@@ -27,7 +26,7 @@ export default async function Home() {
         <h2 className={s.h1}>선물이 필요한 아이들</h2>
 
         <ul className={s.grid}>
-          {firstFunding.map((funding: any) => (
+          {fundings.map((funding: any) => (
             <li key={funding.id} className={s.gridItem}>
               <Link href={`/funding/${funding.id}`}>
                 <div className={s.imageContainer2}>
