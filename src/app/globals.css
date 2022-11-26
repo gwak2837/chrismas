@@ -28,6 +28,10 @@ button {
   cursor: pointer;
 }
 
+ul li {
+  list-style-type: none;
+}
+
 * {
   box-sizing: border-box;
 }
