@@ -29,5 +29,6 @@
     "next@13.0.5": {
       "unplugged": true
     }
-  }
+  },
+  "packageManager": "yarn@3.3.0"
 }
