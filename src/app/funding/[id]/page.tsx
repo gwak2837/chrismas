@@ -5,7 +5,7 @@ import { SERVER_URL, fundings } from '../../../common/constants'
 import s from './page.module.css'
 
 export default async function Funding({ params }: any) {
-  const funding = fundings[params.id]
+  const funding = fundings[params.id - 1]
 
   return (
     <>

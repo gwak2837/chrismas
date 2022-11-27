@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useQuery } from 'react-query'
 
-import { fundings, SERVER_URL } from '../../common/constants'
+import { SERVER_URL, fundings } from '../../common/constants'
 import s from './page.module.css'
 
 async function getFirstFunding() {
