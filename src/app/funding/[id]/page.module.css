@@ -68,3 +68,12 @@
 .margin {
   margin: 1rem;
 }
+
+.button {
+  border: none;
+  border-radius: 0.5rem;
+  background: #11e566;
+  color: #fff;
+  font-size: 2rem;
+  margin: 2rem;
+}

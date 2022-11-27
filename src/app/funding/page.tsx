@@ -30,7 +30,7 @@ export default async function Home() {
             <li key={funding.id} className={s.gridItem}>
               <Link href={`/funding/${funding.id}`}>
                 <div className={s.imageContainer2}>
-                  <Image src={funding.imageUrl} alt="cover image" fill />
+                  <Image src={funding.imageUrl} alt="cover image" className={s.image} fill />
                 </div>
                 <h3 className={s.h3}>
                   {funding.present_name}를 가지고 싶은 {funding.child.age}살{' '}

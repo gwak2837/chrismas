@@ -64,6 +64,7 @@ export const fundings = [
     price: 200_000,
     present_image_url: '/images/01.png',
     present_name: '변신 로보트',
+    progress: 87,
     child: children[0],
   },
   {

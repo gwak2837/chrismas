@@ -15,7 +15,10 @@ export default async function Funding({ params }: any) {
           <div className={s.imageContainer2}>
             <Image src={funding.imageUrl} alt="funding image" fill />
           </div>
-          <h3>{funding.title}</h3>
+          <h3>
+            {funding.present_name}를 가지고 싶은 {funding.child.age}살 {funding.child.name.slice(1)}{' '}
+            어린이
+          </h3>
         </div>
 
         <div className={s.flexItem2} />
@@ -28,12 +31,16 @@ export default async function Funding({ params }: any) {
             </div>
             <div className={s.gridItem}>
               <h3>{funding.present_name}</h3>
-              <div className={s.price}>가격: {funding.price}원</div>
+              <div className={s.price}>
+                가격: {new Intl.NumberFormat('ko-KR').format(funding.price)} 원
+              </div>
               <div className={s.progress}>
                 <div className={s.progress2} style={{ width: `${funding.progress}%` }} />
               </div>
               <div>진행률: {funding.progress}%</div>
-              <button>펀딩하기</button>
+              <div>
+                <button className={s.button}>펀딩하기</button>
+              </div>
             </div>
           </div>
         </div>
